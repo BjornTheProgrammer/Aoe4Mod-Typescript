@@ -1,12 +1,22 @@
 {
-	"name": "aoe4-mod",
-	"version": "1.0.0",
+	"name": "aoe4mod",
+	"version": "1.0.1",
 	"type": "module",
 	"description": "Tool for making aoe4 mods with TypeScript",
 	"main": "./bin/index.js",
 	"bin": {
-		"aoe4mod": "./bin/index.js"
+		"aoe4mod": "bin/index.js"
 	},
+	"keywords": [
+		"aoe",
+		"aoe4",
+		"age-of-empires-iv",
+		"lua",
+		"typescript"
+    ],
+    "homepage": "https://github.com/BjornTheProgrammer/Aoe4Mod-Typescript",
+    "bugs": "https://github.com/BjornTheProgrammer/Aoe4Mod-Typescript",
+    "repository": "https://github.com/BjornTheProgrammer/Aoe4Mod-Typescript/tree/main",
 	"author": "Bjorn Beishline",
 	"license": "MIT",
 	"dependencies": {
