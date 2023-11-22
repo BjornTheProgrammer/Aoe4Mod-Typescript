@@ -1,6 +1,6 @@
 {
 	"name": "aoe4mod",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"type": "module",
 	"description": "Tool for making aoe4 mods with TypeScript",
 	"main": "./bin/index.js",

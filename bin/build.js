@@ -5,7 +5,7 @@ import fs from 'fs';
 import { genImport } from 'knitwork';
 import ts from 'typescript';
 
-import { getAoe4Config, defaultFunctions, printToConsole } from './utils.js';
+import { getAoe4Config, defaultFunctions, printToConsole, isSubdirectory } from './utils.js';
 
 export const aoe4ModBuild = async () => {
 	try {
@@ -36,7 +36,7 @@ export const aoe4ModBuild = async () => {
 			host.readFile = (fileName) => {
 				let fileText = system.readFile(fileName);
 				
-				if (fileName.slice(fileName.length - 5) !== '.d.ts' && fileName.includes(workingDir)) {
+				if (fileName.slice(fileName.length - 5) !== '.d.ts' && isSubdirectory(workingDir, fileName)) {
 					const importsText = genImport('#imports', imports)
 					fileText = `${importsText}\n\n${fileText}`
 				}

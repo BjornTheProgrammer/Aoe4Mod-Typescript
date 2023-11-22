@@ -1,6 +1,6 @@
 import jiti from 'jiti';
-import colors from 'colors';
 import stripAnsi from 'strip-ansi';
+import path from 'path'
 
 export const getAoe4Config = (rootDir) => {
 	globalThis.defineAoe4Config = (c) => c;
@@ -34,3 +34,8 @@ export const printToConsole = (message) => {
 
     console.log(`${message}${' '.repeat(terminalWidth - (messageLength + timeLength))}${formattedTime}`);
 };
+
+export const isSubdirectory = (parent, dir) => {
+	const relative = path.relative(parent, dir);
+	return relative && !relative.startsWith('..') && !path.isAbsolute(relative);
+}
