@@ -1,0 +1,22 @@
+{
+	"compilerOptions": {
+		"baseUrl": "..",
+		"paths": { "#imports": ["./.aoe4/imports"] },
+		"target": "esnext",
+		"lib": [
+			"esnext"
+		],
+		"moduleResolution": "node",
+		"types": [
+			"@aoemods/aoetypes"
+		],
+		"strict": true,
+	},
+	"tstl": {
+		"luaTarget": "5.3",
+		"sourceMapTraceback": false,
+		"noHeader": true,
+		"noImplicitSelf": true
+	},
+	"include": ["../**/*", "./aoe4.d.ts"]
+}

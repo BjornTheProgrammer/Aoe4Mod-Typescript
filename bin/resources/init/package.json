@@ -1,0 +1,12 @@
+{
+  "name": "aoe4-mod",
+  "scripts": {
+    "build": "aoe4mod build",
+    "dev": "aoe4mod build",
+    "postinstall": "aoe4mod prepare"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@aoemods/aoetypes": "^0.1.12"
+  }
+}

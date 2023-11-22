@@ -1,0 +1,22 @@
+{
+	"name": "aoe4-mod",
+	"version": "1.0.0",
+	"type": "module",
+	"description": "Tool for making aoe4 mods with TypeScript",
+	"main": "./bin/index.js",
+	"bin": {
+		"aoe4mod": "./bin/index.js"
+	},
+	"author": "Bjorn Beishline",
+	"license": "MIT",
+	"dependencies": {
+		"@aoemods/aoetypes": "^0.1.12",
+		"chokidar": "^3.5.3",
+		"colors": "^1.4.0",
+		"jiti": "^1.21.0",
+		"knitwork": "^1.0.0",
+		"strip-ansi": "^7.1.0",
+		"typescript": "^5.3.2",
+		"typescript-to-lua": "^1.22.0"
+	}
+}
