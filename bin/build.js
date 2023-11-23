@@ -15,6 +15,8 @@ export const aoe4ModBuild = async () => {
 		const srcDir = path.resolve('src');
 		const workingDir = path.resolve('.');
 
+		if (!fs.existsSync(aoe4Dir)) throw new Error(`Types directory not found! Please run 'aoe4mod prepare' first!`);
+
 		const aoe4Config = getAoe4Config(workingDir);
 
 		const imports = [];
@@ -52,7 +54,7 @@ export const aoe4ModBuild = async () => {
 					for (const mod of aoe4Config.registerMods) {
 						registerMods += `Core_RegisterModule("${mod}")\n`
 					}
-					fileText = `${registerMods}\n${fileText}`
+					fileText = `import("cardinal.scar")\n${registerMods}\n${fileText}`
 				}
 
 				fileText = fileText.replaceAll('importScar', 'import');
