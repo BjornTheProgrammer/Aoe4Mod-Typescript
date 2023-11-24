@@ -77,6 +77,10 @@ You can run your project in dev mode, which will automatically compile and outpu
 npm run dev
 ```
 
+## Acknowledgements
+
+Large amounts of inspiration came from [Age of Empires 4 TypeScript template](https://github.com/aoemods/aoe4-typescript-template) by [RobinKa](https://github.com/RobinKa).
+
 ## License
 
 This project is licensed under MIT.
